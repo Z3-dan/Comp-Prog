@@ -29,14 +29,14 @@ int main()
 
   rep(i,0,n)
   {
-    	int a;
+  	int a;
     	cin >> a;
 	int sum = 0;
 	bool odd = false, even = false;
     
     rep(j,0,a)
     {
-        int x;
+    	int x;
 	cin >> x;
 	sum += x;
 	odd |= x % 2 != 0;
