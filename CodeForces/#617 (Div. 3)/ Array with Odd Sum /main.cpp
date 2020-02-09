@@ -29,18 +29,18 @@ int main()
 
   rep(i,0,n)
   {
-    int a;
-    cin >> a;
-		int sum = 0;
-		bool odd = false, even = false;
+    	int a;
+    	cin >> a;
+	int sum = 0;
+	bool odd = false, even = false;
     
     rep(j,0,a)
     {
-      int x;
-			cin >> x;
-			sum += x;
-			odd |= x % 2 != 0;
-			even |= x % 2 == 0;
+        int x;
+	cin >> x;
+	sum += x;
+	odd |= x % 2 != 0;
+	even |= x % 2 == 0;
     }
 
     if (sum % 2 != 0 || (odd && even)) cout << "YES" << endl;
