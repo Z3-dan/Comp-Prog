@@ -1,4 +1,4 @@
-#pragma GCC optimize("Ofast","unroll-loops")
+﻿#pragma GCC optimize("Ofast","unroll-loops")
 #pragma GCC target("avx2,fma")
 
 #include <bits/stdc++.h>
@@ -20,30 +20,31 @@ typedef unsigned long long ull;
 typedef vector<vi> vvi;
 typedef vector<vii> vvii;
 template <class T> T smod(T a, T b) {
-  return (a % b + b) % b; }
+    return (a % b + b) % b;
+}
 
 int main()
 {
-  int n;
-  cin >> n;
+    int n;
+    cin >> n;
 
-  rep(i,0,n)
-  {
-  	int a;
-    	cin >> a;
-	int sum = 0;
-	bool odd = false, even = false;
-    
-    rep(j,0,a)
+    rep(i,0,n)
     {
-    	int x;
-	cin >> x;
-	sum += x;
-	odd |= x % 2 != 0;
-	even |= x % 2 == 0;
-    }
+        int a;
+        cin >> a;
+        int sum = 0;
+        bool odd = false, even = false;
 
-    if (sum % 2 != 0 || (odd && even)) cout << "YES" << endl;
-    else cout << "NO" << endl;
-  }
+        rep(j,0,a)
+        {
+            int x;
+            cin >> x;
+            sum += x;
+            odd |= x % 2 != 0;
+            even |= x % 2 == 0;
+        }
+
+        if (sum % 2 != 0 || (odd && even)) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
 }
