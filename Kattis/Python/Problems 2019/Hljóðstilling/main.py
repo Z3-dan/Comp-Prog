@@ -1,13 +1,16 @@
 l,r,k = map(int, input().split())
 
 n = input().split()
+n = [int(i) for i in n]
 
-output = 0
+output = []
 
 while l <= r:
     for x in n:
-        if l % int(x) == 0:
-            output = output + 1
+        if l % x == 0 and l % 1 == 0:
+            output.append(l)
     l = l + 1
 
-print(output)
+output = list(set(output))
+
+print(len(output))
